@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=540" />
+        <link rel="stylesheet" href="index.css" />
+        <title>四川省</title>
+    </head>
+
+    <body>
+        <!-- asset -->
+        <div style="display: none">
+            <img id="asset_image_tile_00" src="asset/tile-00.png" />
+            <img id="asset_image_tile_01" src="asset/tile-01.png" />
+            <img id="asset_image_tile_02" src="asset/tile-02.png" />
+            <img id="asset_image_tile_03" src="asset/tile-03.png" />
+            <img id="asset_image_tile_04" src="asset/tile-04.png" />
+            <img id="asset_image_tile_05" src="asset/tile-05.png" />
+            <img id="asset_image_tile_06" src="asset/tile-06.png" />
+            <img id="asset_image_tile_07" src="asset/tile-07.png" />
+            <img id="asset_image_tile_08" src="asset/tile-08.png" />
+            <img id="asset_image_tile_09" src="asset/tile-09.png" />
+            <img id="asset_image_tile_10" src="asset/tile-10.png" />
+            <img id="asset_image_tile_11" src="asset/tile-11.png" />
+            <img id="asset_image_tile_12" src="asset/tile-12.png" />
+            <img id="asset_image_tile_13" src="asset/tile-13.png" />
+            <img id="asset_image_tile_14" src="asset/tile-14.png" />
+            <img id="asset_image_tile_15" src="asset/tile-15.png" />
+            <img id="asset_image_tile_16" src="asset/tile-16.png" />
+            <img id="asset_image_tile_17" src="asset/tile-17.png" />
+            <img id="asset_image_tile_18" src="asset/tile-18.png" />
+            <img id="asset_image_tile_19" src="asset/tile-19.png" />
+            <img id="asset_image_tile_20" src="asset/tile-20.png" />
+            <img id="asset_image_tile_21" src="asset/tile-21.png" />
+            <img id="asset_image_tile_22" src="asset/tile-22.png" />
+            <img id="asset_image_tile_23" src="asset/tile-23.png" />
+            <img id="asset_image_tile_24" src="asset/tile-24.png" />
+            <img id="asset_image_tile_25" src="asset/tile-25.png" />
+            <img id="asset_image_tile_26" src="asset/tile-26.png" />
+            <img id="asset_image_tile_27" src="asset/tile-27.png" />
+            <img id="asset_image_tile_28" src="asset/tile-28.png" />
+            <img id="asset_image_tile_29" src="asset/tile-29.png" />
+            <img id="asset_image_tile_30" src="asset/tile-30.png" />
+            <img id="asset_image_tile_31" src="asset/tile-31.png" />
+            <img id="asset_image_tile_32" src="asset/tile-32.png" />
+            <img id="asset_image_tile_33" src="asset/tile-33.png" />
+
+            <audio id="asset_sound_pick" src="asset/pick.mp3" />
+        </div>
+
+        <script>
+            window.addEventListener("touchmove", (ev) => {
+                ev.preventDefault();
+                ev.stopImmediatePropagation();
+            }, { passive: false });
+        </script>
+
+        <section id="app"></section>
+        <script type="module">
+            import init from "./pkg/package.js";
+            init("./pkg/package_bg.wasm");
+        </script>
+    </body>
+</html>
