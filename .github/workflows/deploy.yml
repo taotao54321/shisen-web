@@ -25,6 +25,7 @@ jobs:
           rm --verbose pkg/.gitignore
           mkdir --verbose public
           cp --verbose index.html index.css public
+          cp --verbose --recursive asset public
           mv --verbose pkg public
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
