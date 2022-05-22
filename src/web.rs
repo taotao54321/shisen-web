@@ -16,7 +16,7 @@ use crate::util;
 const NCOL_INNER: usize = 8;
 const NROW_INNER: usize = 7;
 
-const CANVAS_WIDTH: u32 = 450;
+const CANVAS_WIDTH: u32 = 480;
 
 const TILE_WIDTH: u32 = CANVAS_WIDTH / (NCOL_INNER + 2) as u32;
 const TILE_HEIGHT: u32 = TILE_WIDTH * 4 / 3;
@@ -335,7 +335,8 @@ impl ModelPlaying {
 
     fn view_ui(&self) -> Node<Msg> {
         div![
-            div![util::format_duration(self.clock.elapsed())],
+            C!["ui"],
+            div![span![util::format_duration(self.clock.elapsed())]],
             div![button!["Restart", ev(Ev::Click, |_| Msg::Restart)]],
         ]
     }
@@ -407,6 +408,7 @@ impl ModelWin {
 
     fn view_ui(&self) -> Node<Msg> {
         div![
+            C!["ui"],
             div![strong![util::format_duration(self.elapsed)]],
             div!["CLEAR!"],
             div![button!["Restart", ev(Ev::Click, |_| Msg::Restart)]],
@@ -505,6 +507,7 @@ impl ModelStuck {
 
     fn view_ui(&self) -> Node<Msg> {
         div![
+            C!["ui"],
             div![util::format_duration(self.elapsed)],
             div!["STUCK..."],
             div![button!["Restart", ev(Ev::Click, |_| Msg::Restart)]],
