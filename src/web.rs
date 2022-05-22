@@ -13,10 +13,10 @@ use crate::asset::Asset;
 use crate::shisen::{Board, BoardCell, Move, Square};
 use crate::util;
 
-const NCOL_INNER: usize = 8;
-const NROW_INNER: usize = 7;
+const NCOL_INNER: usize = 7;
+const NROW_INNER: usize = 6;
 
-const CANVAS_WIDTH: u32 = 480;
+const CANVAS_WIDTH: u32 = 468;
 
 const TILE_WIDTH: u32 = CANVAS_WIDTH / (NCOL_INNER + 2) as u32;
 const TILE_HEIGHT: u32 = TILE_WIDTH * 4 / 3;
